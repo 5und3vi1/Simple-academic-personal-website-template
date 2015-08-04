@@ -69,7 +69,7 @@ function displayPublications(lis, type, ordered_list, generate_anchors) {
         if (pre.localeCompare(current) != 0) {
 		
             validClassName = current.replace(/ /g, "");
-            validClassName = validClassName.replace(/[\&:\\\{\}\*\+\$\^\.\|\?\+\(\)\[\]!@#%]/g, "");
+            validClassName = validClassName.replace(/[\&:\\\{\}\*\+\$\/\^\.\|\?\+\(\)\[\]!@#%]/g, "");
 			
 			// Generate <h3><a> and <ul> in div.publications
             $("div.publications").append("<h3>" + (generate_anchors ? "<a name='" + validClassName + "'>" : "") + current + (generate_anchors ? "</a>" : "") + "</h3>" + 
